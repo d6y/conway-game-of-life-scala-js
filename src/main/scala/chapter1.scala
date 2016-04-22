@@ -39,7 +39,7 @@ val conwaysRules: Rules = (cell, neighbours) => {
 }
 
 object Stepper extends Stepper {
-  def apply(rules: Rules): Grid => Grid = 
+  def apply(rules: Rules): Grid => Grid =
     grid => grid.copy(
       cells = grid.cells.map(cell => rules(cell, Grid.neighboursOf(cell,grid)))
   )

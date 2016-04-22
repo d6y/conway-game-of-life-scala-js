@@ -15,7 +15,7 @@ object Examples {
   }
 
   // Static patterns:
- 
+
   val block = grid(
     Sized(0,0,0,0),
     Sized(0,1,1,0),
@@ -32,7 +32,7 @@ object Examples {
   )
 
   // Oscillators
- 
+
   // blinker flips between two states (has period 2)
   val blinker1 = grid(
     Sized(0,0,0,0,0),
