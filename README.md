@@ -12,6 +12,7 @@ Then open _index-dev.html_
 
 ## The code
 
-- _chapter1.scala_ defines the algorithm
-- _chapter2.scala_ runs it using Scala.js
+- _algorithm.scala_ defines the algorithm
+- _drawing.scala_ runs it using Scala.js
+- _grid-examples.scala_ gives example patterns
 

@@ -1,6 +1,3 @@
-// Conway's Game of Life
-// https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
-
 object GameOfLife {
 
 // The game takes places on a 2D grid made up of cells:
@@ -16,6 +13,7 @@ case object Alive extends CellState
 
 // Each step of the game applies rules to the grid, producing new grid.
 // The rules don't change.
+// The Stepper takes the rules and gives us a Grid=>Grid function:
 type Stepper = Rules => Grid => Grid
 
 // The whole game is a series of steps:
@@ -51,8 +49,6 @@ object Game extends Game {
     Stream.iterate(initial)(oneStep)
   }
 }
-
-
 
 // We need a grid to start with:
 object Grid {
@@ -104,6 +100,5 @@ object Grid {
    grid.cells.filter(isNeighbour)
  }
 }
-
 
 }
