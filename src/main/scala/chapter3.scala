@@ -14,7 +14,9 @@ object Examples {
     Grid.create(width, height, (x,y) => Cell(x, y, if (1 == rows(y).toIndexedSeq(x)) Alive else Dead))
   }
 
-  // Static patterns:
+  //
+  // Static patterns
+  //
 
   val block = grid(
     Sized(0,0,0,0),
@@ -31,7 +33,9 @@ object Examples {
     Sized(0,0,0,0,0,0)
   )
 
+  //
   // Oscillators
+  //
 
   // blinker flips between two states (has period 2)
   val blinker1 = grid(
@@ -48,5 +52,18 @@ object Examples {
     Sized(0,1,1,1,0),
     Sized(0,0,0,0,0),
     Sized(0,0,0,0,0)
+  )
+
+  //
+  // Spaceships
+  //
+  val glider = grid(
+    Sized(0,0,0,0,0,0,0),
+    Sized(0,0,0,0,0,0,0),
+    Sized(0,0,1,0,1,0,0),
+    Sized(0,0,0,1,1,0,0),
+    Sized(0,0,0,1,0,0,0),
+    Sized(0,0,0,0,0,0,0),
+    Sized(0,0,0,0,0,0,0)
   )
 }
