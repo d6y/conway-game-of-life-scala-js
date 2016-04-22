@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+<div>
+  <canvas style="display: block" id="canvas" width="500" height="500"></canvas>
+</div>
+
+<script type="text/javascript" src="target/scala-2.11/conwaysjs-fastopt.js"></script>
+<script>
+    ScalaJsGameOfLife().main(document.getElementById('canvas'));
+</script>
+</body>
+</html>
+
