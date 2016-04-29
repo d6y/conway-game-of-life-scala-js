@@ -1,16 +1,14 @@
 import GameOfLife.{Grid,Cell,Alive,Dead}
-import shapeless._, syntax.sized._, ops.sized._
+import shapeless._, syntax.sized._
 import ops.nat._, LT._
 
 object Examples {
 
-  def grid[C <: Nat]
+  def grid[C <: Nat : ToInt]
     (rows: Sized[IndexedSeq[Int], C]*)
-    (implicit
-      ev: _0 < C,
-      gen: ToHList[IndexedSeq[Int],C]): Grid = {
+    (implicit ev: _0 < C): Grid = {
     val height = rows.length
-    val width = rows.head.toHList.runtimeLength
+    val width = Nat.toInt[C]
     Grid.create(width, height, (x,y) => Cell(x, y, if (1 == rows(y).toIndexedSeq(x)) Alive else Dead))
   }
 
