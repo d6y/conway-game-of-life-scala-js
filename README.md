@@ -5,7 +5,7 @@ This project contains an implementation of [Conway's Game of Life](https://en.wi
 ## To run
 
 ```
-sbt fastOptJs
+sbt fastOptJS
 ```
 
 Then open _index-dev.html_
